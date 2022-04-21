@@ -1,0 +1,8 @@
+import pandas as pd
+import warnings
+warnings.filterwarnings("ignore")
+data = pd.read_csv('/content/Book.csv')
+data1 = pd.read_csv('/content/Book1.csv')
+x = data.iloc[295:,:]
+x['sales amount'] = x['sales_quantity']/4
+x
