@@ -1,0 +1,11 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import math
+df = pd.read_csv('Book1.csv')
+#df.drop('Unnamed: 32',axis=1, inplace=True)
+df.head()
+updated_df = df
+updated_df.groupby('product_code')['price'].mean()
+updated_df.to_csv('output.csv')
